@@ -1,0 +1,90 @@
+<html><head></head><body>
+1.使用var定义局部变量，没有默认是全局变量
+2.==或!= 和=== !==  的比较,===全等于速度快
+[10] === 10    // is false
+[10]  == 10    // is true
+'10' == 10     // is true
+'10' === 10    // is false
+ []   == 0     // is true
+ [] ===  0     // is false
+ '' == false   // is true but true == "a" is false
+ '' ===   false // is false
+ 3.typeof害人不浅，null,array,Date,other  返回都是obj
+ var arr = [1,3,4];
+	typeof(arr) //return obj
+	typeof(null); //return obj
+	arr instanceof Array //true
+4.使用自调方法(function(){})();
+
+5.数组随机取值
+var items = [22,33,4,55,66,1,-9,-77,2984];
+var  randomItem = items[Math.floor(Math.random() * items.length)];
+</body>
+
+<script type="text/javascript">
+/**
+*array
+*/
+//##从数组中删除一个元素
+//var items = [12, 548 ,'a' , 2 , 5478 , 'foo' , 8852, , 'Doe' ,2154 , 119 ];
+//items.length; // return 11
+//items.splice(3,1) ;
+//items.length; // return 10
+//##数组中的最大最小值
+//var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
+//var maxInNumbers = Math.max.apply(Math, numbers);
+//var minInNumbers = Math.min.apply(Math, numbers);
+//alert(minInNumbers);
+//##清空一个数组
+//var myarr = [99,4,332];
+//myarr.length = 0;
+//##在一个范围内随机取值
+//var max = 1000;
+//var min = 200;
+//var xx = Math.floor(Math.random() * (max - min + 1)) + min;
+//alert(xx);
+//##范围填充数组
+//var numbersArray = [] , max = 100,min = 1;
+//for( var i=min; numbersArray.push(i++) < max;);  // numbers = [1,2,3 ... 100]
+//alert(numbersArray);
+//##随机生成一个制定长度的字符串
+//function generateRandomAlphaNum(len) {
+//    var rdmString = "";
+//    for( ; rdmString.length < len; rdmString  += Math.random().toString(36).substr(2));
+//    return  rdmString.substr(0, len);
+//}
+//alert(generateRandomAlphaNum(20));
+//##洗牌数组
+//var numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
+//numbers = numbers.sort(function(){ return Math.random() - 0.5});
+//alert(numbers);
+//##去掉前后空格
+//var str = ' fdas              ';
+//var str = str.replace(/^\s+|\s+$/g, "");
+//alert(str.length);
+//##把一个数组添加到另一个数组中
+//var array1 = [12 , "foo" , {name:"Joe"} , -2458];
+//var array2 = ["Doe" , 555 , 100];
+//Array.prototype.push.apply(array1, array2);
+//alert(array1);
+//##判断是否是一个数值类型
+//function isnumber(n){
+//	return !isNaN(parseFloat(n)) && isFinite(n);
+//}
+//function isArray(obj){
+//	return Object.prototype.toString.call(obj) === '[object Array]' ;
+//	return Array.isArray(obj);
+//}
+//##截取数组
+//var arr = [1,2,3,4,5,6,7,8,9,0];
+//arr.length =5;
+//alert(arr);
+//试用|| && 符号代替一些简单的if
+//function w(foo){
+//	foo == 10 || (foo = 10) && alert('not 10');//相当于if(foo !=10){...}
+//	foo == 10 && alert('is 10');//相当于if(foo == 10){...}
+//}
+//##四舍五入
+var num =4.23456;
+alert(num.toFixed(4));
+</script>
